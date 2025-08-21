@@ -4,6 +4,7 @@ import Header from './components/Header';
 import HomePage from './pages/home';
 import AboutPage from './pages/about';
 import NotFoundPage from './pages/not-found';
+import CoinDetailsPage from './pages/coin-details';
 
 const API_URL = import.meta.env.VITE_API_URL;
 
@@ -48,6 +49,7 @@ const App = () => {
           error={error}
         />}/>
         <Route path='/about' element={<AboutPage />}></Route>
+        <Route path='/coin/:id' element={<CoinDetailsPage />}></Route>
         <Route path="*" element={<NotFoundPage />}></Route>
       </Routes>
     </>
